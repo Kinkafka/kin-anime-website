@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <title>Anime List - Dark Modern</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">About</a>
+  </div>
+
+  <div class="content" id="slideshow">
+    <div class="judul">Welcome Admin</div>
+  </div>
+
+  <div class="sub-navbar">
+    <a href="#">List Anime</a>
+    <a href="#">Genre</a>
+    <a href="#">Report</a>
+    <input type="text" id="searchInput" placeholder="Cari anime..." class="search-input">
+    <button id="toggleAdminModeBtn" class="admin-mode-button">Mode Admin</button>
+    <button id="editSelectedBtn" class="edit-selected-button" style="display: none;">Edit yang Dipilih</button>
+    <button id="deleteSelectedBtn" class="delete-button" style="display: none;">Hapus yang Dipilih</button>
+  </div>
+
+  <div class="center">
+    <button id="showAll">Tampilkan Semua</button>
+  </div>
+
+  <div class="anime-container" id="animeList"></div>
+
+  <div class="form-wrapper">
+    <h3>Tambah Anime Baru</h3>
+    <div class="form-group">
+      <label for="titleInput">Judul:</label>
+      <input id="titleInput" placeholder="Masukkan judul anime" />
+    </div>
+    <div class="form-group">
+      <label for="imageInput">URL Gambar:</label>
+      <input id="imageInput" placeholder="Contoh: https://example.com/image.jpg" />
+    </div>
+    <div class="form-group">
+      <label for="genreInput">Genre:</label>
+      <input id="genreInput" placeholder="Contoh: Action, Drama, Fantasy" />
+    </div>
+    <div class="form-group">
+      <label for="linkInput">URL Link Anime (Opsional):</label>
+      <input id="linkInput" placeholder="Contoh: https://id.wikipedia.org/wiki/Your_Name." />
+    </div>
+    <div class="form-group">
+      <label for="descInput">Deskripsi:</label>
+      <textarea id="descInput" placeholder="Masukkan deskripsi anime"></textarea>
+    </div>
+    <button id="addAnimeBtn">Tambah Anime</button>
+  </div>
+
+  <div id="deleteConfirmationModal" class="modal">
+    <div class="modal-content">
+      <p>Apakah Anda yakin ingin menghapus anime yang dipilih?</p>
+      <button id="confirmDeleteBtn">Ya</button>
+      <button id="cancelDeleteBtn">Batal</button>
+    </div>
+  </div>
+
+  <div id="editAnimeModal" class="modal">
+    <div class="modal-content">
+      <h3>Edit Anime</h3>
+      <div class="form-group">
+        <label for="editTitleInput">Judul:</label>
+        <input id="editTitleInput" placeholder="Judul" />
+      </div>
+      <div class="form-group">
+        <label for="editImageInput">URL Gambar:</label>
+        <input id="editImageInput" placeholder="URL Gambar" />
+      </div>
+      <div class="form-group">
+        <label for="editGenreInput">Genre:</label>
+        <input id="editGenreInput" placeholder="Genre (pisahkan dengan koma)" />
+      </div>
+      <div class="form-group">
+        <label for="editLinkInput">URL Link Anime (Opsional):</label>
+        <input id="editLinkInput" placeholder="URL Link Anime (Opsional)" />
+      </div>
+      <div class="form-group">
+        <label for="editDescInput">Deskripsi:</label>
+        <textarea id="editDescInput" placeholder="Deskripsi"></textarea>
+      </div>
+      <button id="saveEditBtn">Simpan</button>
+      <button id="cancelEditBtn">Batal</button>
+    </div>
+  </div>
+
+  <script src="struktur.js"></script>
+</body>
+</html>
