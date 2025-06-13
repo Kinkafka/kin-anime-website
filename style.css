@@ -1,0 +1,450 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.navbar,
+.sub-navbar {
+  display: flex;
+  background-color: #1f1f1f;
+  height: 60px;
+  align-items: center;
+  padding: 0 20px;
+  gap: 10px;
+}
+
+.navbar a,
+.sub-navbar a {
+  margin-right: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar a:hover,
+.sub-navbar a:hover {
+  color: #121212;
+  background-color: #ff9800;
+  padding: 5px 10px;
+  border-radius: 6px;
+}
+
+.content {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-position-y: -70px;
+  height: 300px;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: background-image 1s ease-in-out;
+}
+
+.judul {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.anime-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+  padding: 0 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.anime-box {
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  width: 220px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.anime-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+.anime-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.anime-info {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.anime-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.anime-genre {
+  font-size: 13px;
+  color: #ff9800;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.anime-genre-link {
+  color: #ff9800;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.anime-desc {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+
+.center {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.center button {
+  background-color: #333;
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: Poppins, sans-serif;
+  margin: 5px;
+}
+
+.center button:hover {
+  background-color: #555;
+}
+
+
+.read-more {
+  color: #ff9800;
+  font-size: 13px;
+  display: inline-block;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* SECTION: Gaya untuk tombol pencarian dan mode admin */
+
+.search-input {
+  margin-left: auto;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ff9800;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.admin-mode-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.admin-mode-button:hover {
+  background-color: #45a049;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+/* SECTION: Tombol "Edit yang Dipilih" yang didesain ulang */
+
+.edit-selected-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-left: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.edit-selected-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.edit-selected-button:active {
+  transform: translateY(0);
+}
+
+.delete-checkbox {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+  margin-right: 5px;
+}
+
+.anime-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  position: relative;
+  padding-top: 20px;
+}
+
+/* SECTION: Tombol Edit Individual yang didesain ulang */
+
+.anime-actions .edit-button {
+  background-color: transparent;
+  color: #ff9800;
+  border: 1px solid #ff9800;
+  padding: 8px;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+  margin: 0 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.anime-actions .edit-button:hover {
+  background-color: #ff9800;
+  color: #121212;
+  border-color: #ff9800;
+  transform: translateY(-2px);
+}
+
+.anime-actions .edit-button:active {
+  transform: translateY(0);
+}
+
+/* SECTION: Gaya umum modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #2a2a2a;
+  margin: auto;
+  padding: 25px;
+  border: 1px solid #444;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #ff9800;
+  margin-bottom: 20px;
+}
+
+.modal-content .form-group {
+  margin-bottom: 15px;
+}
+
+.modal-content .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #cccccc;
+  text-align: left;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: calc(100% - 20px);
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  outline: none;
+  border-color: #ff9800;
+  box-shadow: 0 0 0 2px rgba(255, 152, 0, 0.2);
+}
+
+.modal-content button {
+  padding: 10px 20px;
+  background-color: #ff9800;
+  color: #121212;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background-color: #e08e00;
+}
+
+.modal-content button#cancelDeleteBtn,
+.modal-content button#cancelEditBtn {
+  background-color: #6c757d;
+}
+
+.modal-content button#cancelDeleteBtn:hover,
+.modal-content button#cancelEditBtn:hover {
+  background-color: #5a6268;
+}
+
+.anime-title-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.anime-title-link:hover {
+  color: #ff9800;
+  text-decoration: underline;
+}
+
+
+/* SECTION: Kontainer Pesan */
+
+.message-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 16px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 10000;
+}
+
+.message-container.success {
+  background-color: #4CAF50;
+}
+
+.message-container.error {
+  background-color: #f44336;
+}
+
+.message-container.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* SECTION: Gaya Tombol Favorit */
+
+.anime-actions button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.anime-actions button:hover {
+  transform: scale(1.3);
+  filter: brightness(1.2);
+}
+
+.anime-actions button.fav-active {
+  animation: pop 0.3s ease;
+  color: crimson;
+}
+
+#showFav {
+  margin-left: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#showFav:hover {
+  background-color: #555;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}

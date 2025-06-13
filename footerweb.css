@@ -1,0 +1,36 @@
+.footer {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-section {
+  margin-bottom: 30px;
+}
+
+.footer-section h3 {
+  color: #ff4081;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 6px 0;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+
+
+/* <-------------halaman selanjutnya----------------> */
