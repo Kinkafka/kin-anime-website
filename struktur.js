@@ -15,7 +15,7 @@ function changeBackground() {
 changeBackground();
 setInterval(changeBackground, 4000);
 
-const defaultAnimeData = [
+const defaultAnimeData =[
   {
     "id": "anime-1749570932473854",
     "title": "Koe no Katachi",
@@ -104,7 +104,7 @@ const defaultAnimeData = [
     "genre": "Comedy, Romance, Slice of Life, Supernatural",
     "description": "Kisah romansa antara seorang pria keturunan yokai salju yang secara tidak sengaja membekukan sekitarnya saat gugup, dan rekan kerjanya yang tenang dan baik hati.",
     "uploadDate": "2025-06-12",
-    "link": "https://drive.usercontent.google.com/download?id=1BUedxY1w1KGopqkPRSJTDTxslOFvOVl&export=download&authuser=0"
+    "link": "https://drive.usercontent.google.com/download?id=1BUedxY1w1KGopqkPRJTDtPTxslOFvOVl&export=download&authuser=0"
   },
   {
     "id": "anime-1749725515074839",
@@ -213,6 +213,168 @@ const defaultAnimeData = [
     "description": "Emma, Norman, dan Ray menemukan rahasia mengerikan panti asuhan mereka—membuat mereka merencanakan pelarian dan perjuangan bersama untuk kebebasan.",
     "uploadDate": "2025-06-12",
     "link": "https://drive.usercontent.google.com/download?id=1SbIDcQPyZdGzit92-ea7ucuXWaYYmwX1&export=download&authuser=0"
+  },
+  {
+    "id": "anime-1749824825433564",
+    "title": "Citrus",
+    "image": "https://cdn.myanimelist.net/images/anime/11/89985l.jpg",
+    "genre": "Drama, Girls Love, Romance",
+    "description": "Selama musim panas tahun pertamanya di sekolah menengah atas, ibu Yuzu Aihara menikah lagi, memaksanya untuk pindah ke sekolah baru. Bagi seorang sosialita modis seperti Yuzu, kejadian yang tidak mengenakkan ini hanyalah kesempatan lain untuk mendapatkan teman baru, jatuh cinta, dan akhirnya merasakan ciuman pertama. Sayangnya, impian dan gaya Yuzu tidak sesuai dengan sekolah barunya yang sangat ketat, khusus perempuan, yang dipenuhi dengan siswa yang penurut dan anak-anak yang tidak naik kelas. Penampilannya yang mencolok berhasil menarik perhatian Mei Aihara, ketua OSIS yang cantik dan mengesankan, yang segera membelai tubuh Yuzu dengan sensual dalam upaya untuk menyita ponselnya.",
+    "uploadDate": "2025-06-13",
+    "link": "https://drive.usercontent.google.com/download?id=13nznz9eSt4NRTL8NqykJMj1xS4zplsaT&export=download&authuser=0"
+  },
+  {
+    "id": "anime-1749825257960976",
+    "title": "Shinsekai yori",
+    "image": "https://cdn.myanimelist.net/images/anime/12/36775l.jpg",
+    "genre": "Drama, Fantasy, Horror, Mystery, Sci-Fi, Supernatural",
+    "description": "Pada tahun 2011, sebagian kecil manusia mulai menunjukkan kemampuan psikokinetik yang dikenal sebagai \"Cantus.\" Lebih dari satu milenium kemudian, di kota kecil Kamisu 66, Saki Watanabe adalah teman terakhirnya yang membangkitkan kekuatannya dan bergabung dengan Sage Academy, sekolah untuk paranormal sepertinya. Meskipun semua orang di lembaga itu memiliki Cantus, mereka tidak semuanya setara; tak lama setelah Saki mendaftar, salah satu teman sekelasnya yang dianggap lebih lemah dari yang lain tiba-tiba menghilang.",
+    "uploadDate": "2025-06-13",
+    "link": "https://drive.usercontent.google.com/download?id=1HK_lTOFOFEY5OTqY-6AlypjTyF4qNecd&export=download&authuser=0"
+  },
+  {
+    "id": "anime-1749825450765436",
+    "title": "Charlotte",
+    "image": "https://cdn.myanimelist.net/images/anime/5/72941l.jpg",
+    "genre": "School, Super Power, Drama",
+    "description": "Jika bukan karena kemampuannya untuk menguasai pikiran dan tubuh orang lain, Yuu Otosaka akan menjadi siswa SMA biasa. Meskipun hanya berlangsung selama lima detik, kekuatan misterius Yuu memungkinkannya untuk menipu dan menjadi siswa terbaik di kelasnya dan masuk ke SMA bergengsi, tempat ia melanjutkan tindakan tidak jujurnya.",
+    "uploadDate": "2025-06-13",
+    "link": "https://drive.usercontent.google.com/download?id=1ITzkp1sQ23ghYiBgLBq5ztUmEFX0ghY9&export=download&authuser=0"
+  },
+  {
+    "id": "anime-1749825670035123",
+    "title": "Guilty Crown",
+    "image": "https://cdn.myanimelist.net/images/anime/1085/93983l.jpg?_gl=1*macsm2*_gcl_au*MTcwOTg0ODAzMS4xNzQ4MzM2OTg4*_ga*OTIyMjIyMDgxLjE3NDgzMzY5ODY.*_ga_26FEP9527K*czE3NDk4MjQ1ODQkbzEyJGcxJHQxNzQ5ODI1NTczJGo2MCRsMCRoMA..",
+    "genre": "Action, Drama, Sci-Fi",
+    "description": "Pada tanggal 24 Desember 2029—hari yang secara umum dikenal sebagai \"Natal yang Hilang\"—Virus Kiamat menyebar ke seluruh Jepang, menyebabkan kematian bagi warganya dan menjerumuskan negara tersebut ke dalam kekacauan total. Dalam upaya untuk menegakkan ketertiban, Perserikatan Bangsa-Bangsa mengirim GHQ untuk membantu mengatasi krisis dengan menahan wabah tersebut sambil mencabut semua otonomi politik dalam prosesnya. Satu dekade kemudian, negara tersebut masih hidup di bawah kendali mereka, tidak dapat melepaskan diri dari kekuasaan kejam mereka.",
+    "uploadDate": "2025-06-13",
+    "link": "https://drive.usercontent.google.com/download?id=1oXu69GqIiD_gaNII8NLBXmzWzVw4Clrh&export=download&authuser=0"
+  },
+  {
+    "id": "anime-17498260837147",
+    "title": "Plastic Memories",
+    "image": "https://cdn.myanimelist.net/images/anime/11/71039l.jpg",
+    "genre": "Drama, Romance, Sci-Fi",
+    "description": "Tsukasa Mizugaki yang berusia delapan belas tahun gagal dalam ujian masuk perguruan tinggi, tetapi setelah berusaha keras, ia berhasil mendapatkan pekerjaan di Sion Artificial Intelligence Corporation. SAI Corp bertanggung jawab atas penciptaan \"Giftias\"—android yang sangat canggih yang hampir tidak dapat dibedakan dari manusia normal. Namun, tidak seperti manusia, Giftia memiliki rentang hidup maksimum 81.920 jam, atau sekitar sembilan tahun empat bulan. Terminal Service One, stasiun tempat Tsukasa ditugaskan, bertanggung jawab untuk mengumpulkan Giftia yang telah melewati tanggal kedaluwarsa, sebelum mereka kehilangan ingatan dan menjadi agresif.",
+    "uploadDate": "2025-06-13",
+    "link": "https://drive.usercontent.google.com/download?id=15ye4thX1LbYUB_hL1Hetpfgv9YhwhEwB&export=download&authuser=0"
+  },
+  {
+    "id": "anime-1749980461734765",
+    "title": "Vinland Saga (Season 2)",
+    "image": "https://cdn.myanimelist.net/images/anime/1227/124318l.jpg",
+    "genre": "Action, Adventure, Drama, Historical",
+    "description": "Setelah ayahnya meninggal dan desanya hancur di tangan para perampok Inggris, Einar menginginkan kehidupan yang damai bersama keluarganya di pertanian mereka yang baru dibangun kembali. Namun, takdir berkata lain: desanya diserbu sekali lagi. Einar menyaksikan dengan tak berdaya saat para perampok Denmark membakar tanahnya dan membantai keluarganya. Para penyerbu menangkap Einar dan membawanya kembali ke Denmark sebagai budak.",
+    "uploadDate": "2025-06-15",
+    "link": "https://drive.usercontent.google.com/download?id=1HzNf44KMfSkZgCipQ5FMDKqfEyza_WpK&export=download&authuser=0"
+  },
+  {
+    "id": "anime-174998065256243",
+    "title": "Adachi to Shimamura",
+    "image": "https://cdn.myanimelist.net/images/anime/1586/124943l.jpg",
+    "genre": "Girls Love, Slice of Life, School",
+    "description": "Adachi dan Shimamura adalah dua siswi SMA yang menghabiskan waktu bersama di lantai dua gym. Seiring berjalannya waktu, persahabatan mereka mulai berkembang menjadi sesuatu yang lebih dalam.",
+    "uploadDate": "2025-06-15",
+    "link": "https://drive.usercontent.google.com/download?id=1NWaTH_uxNCPiPX-SX66sma_pyghCpz2K&export=download&authuser=0"
+  },
+  {
+    "id": "anime-1749980996373189",
+    "title": "Yagate Kimi ni Naru",
+    "image": "https://cdn.myanimelist.net/images/anime/1338/93419l.jpg",
+    "genre": "Drama, Romance, Girl Love",
+    "description": "Yuu Koito selalu terpesona dengan manga shoujo romantis dan lirik lagu cinta. Dia dengan sabar menunggu sayap cinta tumbuh dan membuat hatinya berdebar-debar pada hari ketika dia akhirnya menerima pengakuan cinta. Namun, ketika teman sekelasnya dari SMP menyatakan cintanya padanya saat kelulusan mereka, dia tiba-tiba merasa hampa. Kesadaran itu menghantamnya: dia memahami romansa sebagai sebuah konsep, tetapi dia tidak mampu merasakan perasaan itu secara langsung.",
+    "uploadDate": "2025-06-15",
+    "link": "https://drive.usercontent.google.com/download?id=1tE-kwns7h7Z2RlnwtroRlhS-QCLWIRqz&export=download&authuser=0"
+  },
+  {
+    "id": "anime-jujutsu-kaisen-s2",
+    "title": "Jujutsu Kaisen (Season 2)",
+    "image": "https://cdn.myanimelist.net/images/anime/1792/138022l.jpg",
+    "genre": "Action, Dark Fantasy, Supernatural",
+    "description": "Melanjutkan kisah Yuji Itadori dan teman-temannya dalam menghadapi kutukan-kutukan berbahaya.",
+    "uploadDate": "2025-06-12",
+    "link": "https://drive.usercontent.google.com/download?id=1YlUmvqB67ao4jqblD7rC1ZXrP6IJvNif&export=download&authuser=0"
+  },
+  {
+    "id": "anime-spy-family-s2",
+    "title": "Spy × Family (Season 2)",
+    "image": "https://i0.wp.com/www.rukita.co/stories/wp-content/uploads/2023/10/spy-x-family-sumber-comicbook-com.webp?resize=600%2C1000&ssl=1",
+    "genre": "Action, Comedy, Slice of Life",
+    "description": "Keluarga Forger melanjutkan misi mereka untuk menjaga perdamaian dunia, sambil menghadapi tantangan sehari-hari yang lucu.",
+    "uploadDate": "2025-06-12",
+    "link": "https://drive.usercontent.google.com/download?id=1D9lZ9WRyb2CiXawAqz1BQUojIkJo2oGC&export=download&authuser=0"
+  },
+  {
+    "id": "anime-made-in-abyss-s2",
+    "title": "Made in Abyss (Season 2)",
+    "image": "https://cdn.myanimelist.net/images/anime/1864/122519l.jpg",
+    "genre": "Adventure, Fantasy, Sci-Fi",
+    "description": "Riko, Reg, dan Nanachi melanjutkan petualangan mereka ke kedalaman Abyss yang semakin berbahaya.",
+    "uploadDate": "2025-06-12",
+    "link": "https://drive.usercontent.google.com/download?id=131QRmEBfMwt6Yp24OvQGwXDTD-0iUZmz&export=download&authuser=0"
+  },
+  {
+    "id": "anime-attack-on-titan-s2-3-4",
+    "title": "Attack on Titan (Season 2)",
+    "image": "https://upload.wikimedia.org/wikipedia/id/a/ab/Attack_on_Titan_Season_2_vol_1.jpg",
+    "genre": "Action, Dark Fantasy, Drama",
+    "description": "Musim kedua ini melanjutkan cerita setelah pertempuran melawan Female Titan, di mana Eren dan pasukannya harus menghadapi ancaman baru dari gerombolan Titan yang mendekati Wall Rose. Musim ini juga menampilkan kemunculan Beast Titan dan memperkenalkan karakter baru seperti Historia Reiss. Selain itu, musim ini juga mengeksplorasi lebih dalam tentang sejarah dan asal-usul para Titan",
+    "uploadDate": "2025-06-12",
+    "link": "https://drive.usercontent.google.com/download?id=11joI-UA3Oox1j8U6Zfyp4zmRNQLi9zbr&export=download&authuser=0"
+  },
+  {
+    "id": "anime-the-promised-neverland-s2",
+    "title": "The Promised Neverland (Season 2)",
+    "image": "https://cdn-myanimelist-net.translate.goog/images/anime/1663/110627l.jpg?_x_tr_sl=en&_x_tr_tl=id&_x_tr_hl=id&_x_tr_pto=imgs",
+    "genre": "Dark Fantasy, Sci-Fi, Thriller",
+    "description": "Musim kedua dari anime \"The Promised Neverland\" melanjutkan cerita tentang sekelompok anak yatim yang melarikan diri dari panti asuhan, Grace Field House. Mereka berusaha bertahan hidup di dunia luar yang penuh dengan bahaya, termasuk iblis dan ancaman lainnya. Musim kedua ini juga menampilkan petualangan mereka dalam mencari tempat aman dan mengungkap misteri di balik dunia tempat mereka tinggal",
+    "uploadDate": "2025-06-12",
+    "link": "https://drive.usercontent.google.com/download?id=1uzEQDGm1Ix-wW_jMuGhFS-BA5H6ZTKFI&export=download&authuser=0"
+  },
+  {
+    "id": "anime-kimi-no-na-wa",
+    "title": "Kimi no Na wa",
+    "image": "https://cdn.myanimelist.net/images/anime/9/77484l.jpg",
+    "genre": "Romance, Supernatural, Drama",
+    "description": "Mengisahkan dua orang remaja yang lahir dan hidup di tempat yang berbeda. Mitsuha adalah seorang gadis SMA yang tinggal di daerah pedesaan di pegunungan. Ayahnya yang jarang pulang ke rumah membuat Mitsuha hanya hidup bersama nenek dan adiknya yang masih SD. Mitsuha sering berkeinginan untuk pergi ke Tokyo karena bosan hidup di pedesaan. Sementara itu, Taki adalah seorang siswa SMA di kota Tokyo. Dalam kesehariannya, ia menghabiskan waktu untuk bermain dengan teman-temannya dan bekerja paruh waktu di restoran Italia. Dia juga tertarik dengan kesenian dan arsitektur. Suatu hari mereka mengalami pengalaman aneh di mana Mitsuha bermimpi dirinya menjadi seorang laki-laki. Dan sebaliknya, Taki bermimpi dirinya menjadi perempuan yang tinggal di daerah pegunungan yang tak pernah ia datangi.",
+    "uploadDate": "2025-06-12",
+    "link": "https://drive.usercontent.google.com/download?id=1lwdcwGmnLOTh-d2M4yTFFfXwZWjV-7Om&export=download&authuser=0"
+  },
+  {
+    "id": "anime-shigatsu-wa-kimi-no-uso",
+    "title": "Grand Blue",
+    "image": "https://cdn.myanimelist.net/images/anime/1302/94882l.jpg",
+    "genre": "Comedy",
+    "description": "Seorang pianis muda yang kehilangan kemampuannya untuk bermain setelah trauma, bertemu dengan seorang pemain biola bebas yang mengubah dunianya.",
+    "uploadDate": "2025-06-12",
+    "link": "https://drive.usercontent.google.com/download?id=1W2_TYh1dGbkZoY8n_IRQTprLnywr9BGP&export=download&authuser=0"
+  },
+  {
+    "id": "anime-fruits-basket-2019",
+    "title": "Fruits Basket",
+    "image": "https://cdn.myanimelist.net/images/anime/1050/99826l.jpg",
+    "genre": "Romance, Slice of Life, Drama",
+    "description": "Setelah kecelakaan yang menyebabkan ibunya meninggal, Tooru yang berusia 16 tahun pindah bersama kakeknya, tetapi karena rumahnya sedang direnovasi, ia tidak dapat terus tinggal bersamanya. Berdalih akan menemukan seseorang untuk tinggal bersamanya tetapi juga takut akan kritikan dari keluarganya dan tidak ingin membebani teman-temannya, Tooru memutuskan untuk tinggal sendiri secara diam-diam di sebuah tenda di hutan.",
+    "uploadDate": "2025-06-12",
+    "link": "https://drive.usercontent.google.com/download?id=1zayo3omoxhS5WS1Q1AonHm1liNVxa2RY&export=download&authuser=0"
+  },
+  {
+    "id": "anime-horimiya",
+    "title": "Horimiya",
+    "image": "https://cdn.myanimelist.net/images/anime/1727/109235l.jpg",
+    "genre": "Romance, Slice of Life, Comedy",
+    "description": "Di permukaan, pikiran tentang Kyouko Hori dan Izumi Miyamura yang akur akan menjadi hal terakhir dalam pikiran orang-orang. Bagaimanapun, Hori memiliki kombinasi sempurna antara kecantikan dan otak, sementara Miyamura tampak lemah lembut dan jauh dari teman-teman sekelasnya. Namun, pertemuan yang menentukan antara keduanya mengungkap jati diri mereka yang tersembunyi. Meskipun dia populer di sekolah, Hori hanya punya sedikit waktu untuk bersosialisasi dengan teman-temannya karena pekerjaan rumah. Di sisi lain, Miyamura hidup di bawah hidung teman-temannya, tubuhnya dipenuhi tato dan tindikan rahasia yang membuatnya tampak seperti berandalan yang lembut.",
+    "uploadDate": "2025-06-12",
+    "link": "https://drive.usercontent.google.com/download?id=10anjh1ZHU9FrEOssq8mhJ6_bvDoNskzo&export=download&authuser=0"
+  },
+  {
+    "id": "anime-1749800000000004",
+    "title": "Lycoris Recoil (perlu di edit)",
+    "image": "https://cdn.myanimelist.net/images/anime/1392/124401l.jpg",
+    "genre": "Action, Slice of Life",
+    "description": "Tim gadis agen rahasia yang menjalankan polisi swasta untuk menjaga keamanan Tokyo, melalui keseharian sambil menghadapi ancaman kriminal.",
+    "uploadDate": "2025-06-12",
+    "link": "https://drive.usercontent.google.com/download?id=1nVazYmerLBqoXfagtN8NVbBHNRXhTvdR&export=download&authuser=0"
   }
 ];
 
