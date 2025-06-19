@@ -15,7 +15,7 @@ function changeBackground() {
 changeBackground();
 setInterval(changeBackground, 4000);
 
-const defaultAnimeData =[
+const defaultAnimeDat =[
   {
     "id": "anime-1749570932473854",
     "title": "Koe no Katachi",
@@ -335,7 +335,7 @@ const defaultAnimeData =[
     "id": "anime-kimi-no-na-wa",
     "title": "Kimi no Na wa",
     "image": "https://cdn.myanimelist.net/images/anime/9/77484l.jpg",
-    "genre": "Romance, Supernatural, Drama",
+    "genre": "Romance, Supernatural, Drama, Movie",
     "description": "Mengisahkan dua orang remaja yang lahir dan hidup di tempat yang berbeda. Mitsuha adalah seorang gadis SMA yang tinggal di daerah pedesaan di pegunungan. Ayahnya yang jarang pulang ke rumah membuat Mitsuha hanya hidup bersama nenek dan adiknya yang masih SD. Mitsuha sering berkeinginan untuk pergi ke Tokyo karena bosan hidup di pedesaan. Sementara itu, Taki adalah seorang siswa SMA di kota Tokyo. Dalam kesehariannya, ia menghabiskan waktu untuk bermain dengan teman-temannya dan bekerja paruh waktu di restoran Italia. Dia juga tertarik dengan kesenian dan arsitektur. Suatu hari mereka mengalami pengalaman aneh di mana Mitsuha bermimpi dirinya menjadi seorang laki-laki. Dan sebaliknya, Taki bermimpi dirinya menjadi perempuan yang tinggal di daerah pegunungan yang tak pernah ia datangi.",
     "uploadDate": "2025-06-12",
     "link": "https://drive.usercontent.google.com/download?id=1lwdcwGmnLOTh-d2M4yTFFfXwZWjV-7Om&export=download&authuser=0"
@@ -375,6 +375,141 @@ const defaultAnimeData =[
     "description": "Tim gadis agen rahasia yang menjalankan polisi swasta untuk menjaga keamanan Tokyo, melalui keseharian sambil menghadapi ancaman kriminal.",
     "uploadDate": "2025-06-12",
     "link": "https://drive.usercontent.google.com/download?id=1nVazYmerLBqoXfagtN8NVbBHNRXhTvdR&export=download&authuser=0"
+  },
+  {
+    "id": "anime-175034868526849",
+    "title": "Kiznaiver",
+    "image": "https://cdn.myanimelist.net/images/anime/2/76887l.jpg",
+    "genre": "Drama, Romance, Sci-Fi",
+    "description": "Katsuhira Agata adalah seorang remaja laki-laki yang pendiam dan tertutup yang rasa sakitnya telah hilang. Temannya, Chidori Takashiro, hanya bisa mengingat samar-samar hari-hari sebelum Katsuhira mengalami perubahan yang mendalam ini. Sekarang, sikapnya yang kalem dan puas diri membuat Katsuhira menjadi sasaran para pengganggu, yang mengeksploitasinya untuk mendapatkan sejumlah uang yang sangat besar. Namun, tinju mereka hanya berhasil membuatnya berkedip, karena bahkan emosi pun jauh dari jangkauannya.",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=1Y1Q84SXPvAoPbtX_rqWtqbn_Dk9JIsl3&export=download&authuser=0"
+  },
+  {
+    "id": "anime-175034909481620",
+    "title": "Classroom Of The Elite (Season 1)",
+    "image": "https://cdn.myanimelist.net/images/anime/5/86830l.jpg?_gl=1*4bho8x*_gcl_au*MTcwOTg0ODAzMS4xNzQ4MzM2OTg4*_ga*OTIyMjIyMDgxLjE3NDgzMzY5ODY.*_ga_26FEP9527K*czE3NTAzNDg5NjgkbzE1JGcxJHQxNzUwMzQ5MDc3JGo1NyRsMCRoMA..",
+    "genre": "Drama, Suspense, School, Psychological",
+    "description": "Di permukaan, SMA Koudo Ikusei adalah utopia. Para siswa menikmati kebebasan yang tak tertandingi, dan sekolah ini mendapat peringkat tinggi di Jepang. Namun, kenyataannya tidaklah ideal. Empat kelas, A hingga D, diberi peringkat berdasarkan prestasi, dan hanya kelas teratas yang menerima perlakuan yang baik.",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=1B6ZQkr2FV57VD6eN1UKPHMQ9cupsQLEV&export=download&authuser=0"
+  },
+  {
+    "id": "anime-1750349270581325",
+    "title": "Classroom Of The Elite (Season 2)",
+    "image": "https://cdn.myanimelist.net/images/anime/1279/121251l.jpg",
+    "genre": "Drama, Suspense, School, Psychological",
+    "description": "Season ke 2 dari anime-C;assroom Of The Elite",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=1ti4LNTcJ5RAA5yIAtURoy2kp0BXDVOcn&export=download&authuser=0"
+  },
+  {
+    "id": "anime-175034954809266",
+    "title": "Classroom Of The Elite (Season 3)",
+    "image": "https://cdn.myanimelist.net/images/anime/1280/137323l.jpg",
+    "genre": "Drama, Suspense, School, Psychological",
+    "description": "Season 3 dari anime-Classroom Of The Elite",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=1hgAr0zm81L0AnF6FUOgvZYiiwByrhFgI&export=download&authuser=0"
+  },
+  {
+    "id": "anime-17503497246482",
+    "title": "Tasogare Otome x Amnesia",
+    "image": "https://cdn.myanimelist.net/images/anime/12/64435l.jpg?_gl=1*l37lyt*_gcl_au*MTcwOTg0ODAzMS4xNzQ4MzM2OTg4*_ga*OTIyMjIyMDgxLjE3NDgzMzY5ODY.*_ga_26FEP9527K*czE3NTAzNDg5NjgkbzE1JGcxJHQxNzUwMzQ5Njk0JGo5JGwwJGgw",
+    "genre": "Horror, Mystery, Romance, Supernatural, School",
+    "description": "Akademi Swasta Seikyou, yang dibangun berdasarkan intrik mitos-mitos okultisme tradisional, memiliki masa lalu yang kelam—selama 60 tahun, sekolah ini dihantui oleh hantu yang dikenal sebagai Yuuko, seorang wanita muda yang meninggal secara misterius di ruang bawah tanah gedung sekolah lama. Tanpa ingatan tentang kehidupan atau kematiannya, Yuuko diam-diam menemukan dan mengepalai Klub Investigasi Paranormal untuk mencari jawaban.",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=1jdCh7nRE-NGMTj_1VkJf_Kt2FLsdPUrL&export=download&authuser=0"
+  },
+  {
+    "id": "anime-1750350063186437",
+    "title": "Vanitas No Carte",
+    "image": "https://cdn.myanimelist.net/images/anime/1808/113764l.jpg",
+    "genre": "Action, Fantasy, Mystery, Historical, Fantasy, Vampire",
+    "description": "Dicemooh oleh kaumnya karena dilahirkan di bawah bulan biru, vampir Vanitas menjadi takut dan kesepian. Menurut legenda, ia menciptakan sebuah grimoire terkutuk yang dikenal sebagai \"Kitab Vanitas\", dan dikatakan bahwa suatu hari nanti ia akan menggunakannya untuk membalas dendam pada semua vampir di bulan merah.",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=1joZc9PPUqxQHyyeUbeq9JxvaAZCv9nxn&export=download&authuser=0"
+  },
+  {
+    "id": "anime-17503502112746",
+    "title": "Vanitas No Carte (Part 2)",
+    "image": "https://cdn.myanimelist.net/images/anime/1785/120021l.jpg",
+    "genre": "Action, Fantasy, Mystery, Historical, Fantasy, Vampire",
+    "description": "Part 2 dari anime-Vanitas No Carte",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=12hKGW2tA2hvT6mej-euaxEw6scKc2SKW&export=download&authuser=0"
+  },
+  {
+    "id": "anime-17188154467008",
+    "title": "Shokugeki no Soma (Food Wars!)",
+    "image": "https://cdn.myanimelist.net/images/anime/5/76426l.jpg",
+    "genre": "Comedy, Ecchi, School, Shounen",
+    "description": "Soma Yukihira memiliki impian besar untuk menjadi koki penuh waktu di restoran milik ayahnya dan melampaui keterampilan kuliner ayahnya yang legendaris. Namun, takdir berkata lain ketika ayahnya memutuskan untuk menutup restoran dan pergi berpetualang kuliner keliling dunia. Sebagai gantinya, Soma didaftarkan ke Akademi Kuliner Totsuki, sebuah institusi elit yang terkenal sangat sulit dan hanya meluluskan sedikit siswa. Di sana, Soma harus menghadapi tantangan \"Shokugeki\" (perang makanan) yang intens, bersaing dengan koki-koki muda berbakat lainnya dari seluruh dunia dengan gaya dan filosofi kuliner yang berbeda-beda. Dengan semangat pantang menyerah dan ide-ide masakan yang tak terduga, Soma bertekad untuk menjadi yang terbaik di akademi ini dan suatu hari nanti, membuka kembali restoran keluarganya.",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=18AzJ6gp-xaKY_7kCOKlMKJvILfKseyYS&export=download&authuser=0"
+  },
+  {
+    "id": "anime-17188154467009",
+    "title": "March Comes in Like a Lion",
+    "image": "https://cdn.myanimelist.net/images/anime/12/82901l.jpg",
+    "genre": "Drama, Game, Slice of Life",
+    "description": "Rei Kiriyama adalah seorang pemain shogi profesional berusia 17 tahun yang masih dibebani oleh tragedi kematian keluarganya. Hidupnya terasa hampa dan kesepian, hanya ditemani oleh papan shogi dan rutinitas pertandingan yang padat. Namun, kehidupannya mulai berubah ketika ia bertemu dengan tiga saudari Kawamoto: Akari, Hinata, dan Momo, yang memiliki toko manisan tradisional. Keluarga Kawamoto menyambut Rei dengan kehangatan dan kasih sayang yang telah lama hilang dari hidupnya. Melalui interaksi dengan mereka dan juga dengan lawan-lawannya di dunia shogi, Rei perlahan belajar untuk membuka diri, mengatasi traumanya, dan menemukan kembali makna hidup, sambil terus berjuang di dunia shogi yang kompetitif.",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=1_9-reobkImOaN1S-bgJA0JHbJ4Q86lhN&export=download&authuser=0https://drive.usercontent.google.com/download?id=1_9-reobkImOaN1S-bgJA0JHbJ4Q86lhN&export=download&authuser=0"
+  },
+  {
+    "id": "anime-17188154467010",
+    "title": "Hyouka",
+    "image": "https://cdn.myanimelist.net/images/anime/4/39025l.jpg",
+    "genre": "Mystery, School, Slice of Life",
+    "description": "Houtarou Oreki adalah seorang siswa SMA dengan moto hidup 'jika tidak perlu, jangan lakukan, jika perlu, persingkat'. Atas desakan kakaknya, ia terpaksa bergabung dengan Klub Sastra Klasik yang terancam dibubarkan. Di sana, ia bertemu dengan Eru Chitanda, seorang gadis yang sangat ingin tahu dan tidak bisa menahan diri untuk tidak menyelidiki misteri apa pun yang menarik perhatiannya. Bersama dengan teman-teman klub lainnya, Satoshi Fukube yang ceria dan Mayaka Ibara yang tegas, Houtarou yang malas dipaksa untuk menggunakan kemampuan deduksinya yang luar biasa untuk memecahkan berbagai misteri kecil dan teka-teki yang muncul di kehidupan sehari-hari mereka, terutama yang berkaitan dengan sejarah Klub Sastra Klasik itu sendiri.",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=14brM-7S6IuNI5wQ2pvjXB2veA5U-ezV8&export=download&authuser=0"
+  },
+  {
+    "id": "anime-17188154467011",
+    "title": "Ghost Stories",
+    "image": "https://cdn.myanimelist.net/images/anime/1414/112029l.jpg",
+    "genre": "Horror, Mystery, Supernatural",
+    "description": "Setelah pindah ke kota tempat ibunya pernah tinggal, Satsuki Miyanoshita dan adiknya, Keiichirou, mulai bersekolah di sebuah sekolah lama yang kemudian terungkap dibangun di atas tanah kuburan. Mereka bersama teman-teman baru mereka, termasuk Hajime Aoyama yang pemberani, Reo Kakinoki yang penakut, dan Momoko Koigakubo yang spiritual, sering kali terlibat dalam insiden supernatural yang menakutkan. Untuk melawan roh-roh jahat yang muncul, mereka harus menggunakan buku harian ibunya Satsuki yang berisi petunjuk tentang cara menyegel hantu. Anime ini terkenal dengan dubbing bahasa Inggris-nya yang sangat bebas dan kocak, mengubah nuansa horor menjadi komedi gelap yang tak terduga, sehingga tetap seru untuk ditonton bahkan bagi mereka yang tidak terlalu suka horor.",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=1dHR4B_Ebp2AXbgsob24h0RqwarpQo4UW&export=download&authuser=0"
+  },
+  {
+    "id": "anime-17188154467012",
+    "title": "Yona of the Dawn (Akatsuki no Yona)",
+    "image": "https://cdn.myanimelist.net/images/anime/4/68391l.jpg",
+    "genre": "Action, Adventure, Comedy, Fantasy, Romance, Shoujo",
+    "description": "Hidup Putri Yona yang mewah dan damai di Kerajaan Kouka hancur dalam semalam ketika sepupunya, Su-won, melakukan kudeta dan membunuh ayahnya, Raja Il. Yona terpaksa melarikan diri dari istana bersama pengawal setianya, Son Hak. Untuk merebut kembali kerajaannya dan menyelamatkan rakyatnya, Yona harus mencari empat naga legendaris yang konon akan bangkit untuk melayani seorang raja yang ditakdirkan. Perjalanan ini mengubah Yona dari seorang putri manja menjadi seorang wanita muda yang kuat, bertekad, dan mampu bertarung, sambil mengumpulkan sekutu dan menghadapi berbagai tantangan di sepanjang jalan.",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=1dQsvpuvAJ4dBPWnqarMJ_BVR0wbKmk4l&export=download&authuser=0"
+  },
+  {
+    "id": "anime-17188154467013",
+    "title": "Akame ga Kill!",
+    "image": "https://cdn.myanimelist.net/images/anime/1115/97001l.jpg?_gl=1*qnytue*_gcl_au*MTcwOTg0ODAzMS4xNzQ4MzM2OTg4*_ga*OTIyMjIyMDgxLjE3NDgzMzY5ODY.*_ga_26FEP9527K*czE3NTAzNTIxODQkbzE2JGcwJHQxNzUwMzUyMTg0JGo2MCRsMCRoMA..",
+    "genre": "Action, Dark Fantasy, Adventure",
+    "description": "Tatsumi, seorang petarung muda dari desa, melakukan perjalanan ke ibukota kekaisaran dengan harapan bisa mendapatkan uang untuk menyelamatkan desanya dari kemiskinan. Namun, ia segera menemukan bahwa ibukota yang ia impikan adalah sarang korupsi, kekejaman, dan ketidakadilan yang merajalela. Setelah hampir menjadi korban penipuan, Tatsumi diselamatkan oleh Night Raid, sebuah kelompok pembunuh yang bekerja untuk Tentara Revolusioner dengan tujuan menggulingkan pemerintahan yang korup. Terkejut dengan kenyataan pahit, Tatsumi bergabung dengan Night Raid dan menggunakan keahlian bertarungnya untuk melawan rezim jahat, menghadapi bahaya mematikan, dan membuat keputusan sulit di tengah pertempuran yang brutal.",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=1lPZcJEKT0YHEHXimna1-0_nT2CQvLZBL&export=download&authuser=0"
+  },
+  {
+    "id": "anime-17188154467014",
+    "title": "Hataraku Saibō",
+    "image": "https://cdn.myanimelist.net/images/anime/1270/95221l.jpg",
+    "genre": "Comedy, Shounen",
+    "description": "Pernah bertanya-tanya apa yang terjadi di dalam tubuh kita setiap hari? Cells at Work! membawa kita ke dalam dunia mikroskopis tubuh manusia, di mana miliaran sel bekerja keras 24/7 untuk menjaga kita tetap hidup dan sehat. Anime ini dengan cerdas mengantropomorfisasi berbagai jenis sel, mulai dari Sel Darah Merah yang ceroboh tapi pekerja keras, Sel Darah Putih (Neutrofil) yang gigih melawan kuman, hingga T-Sel Pembunuh yang kejam, dan Platelet yang imut. Setiap episode menampilkan tantangan baru bagi para sel, seperti invasi bakteri, alergi, atau bahkan luka, yang mereka hadapi dengan dedikasi dan terkadang, sedikit kekacauan lucu. Ini adalah cara yang menyenangkan dan mendidik untuk memahami bagaimana tubuh kita berfungsi.",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=11zPqJIeRcFVvYbVsWiPns0DhiQNn6Kh1&export=download&authuser=0"
+  },
+  {
+    "id": "anime-17188154467015",
+    "title": "No Game No Life",
+    "image": "https://cdn.myanimelist.net/images/anime/12/59115l.jpg",
+    "genre": "Comedy, Fantasy, Ecchi, Isekai",
+    "description": "Enam belas ras makhluk hidup mendiami Disboard, sebuah dunia yang diawasi oleh Tet. Ras terendah dari keenam belas ras tersebut-Imanity-terdiri dari manusia, ras yang tidak memiliki ketertarikan terhadap sihir. Di tempat di mana segala sesuatunya diputuskan melalui permainan sederhana, umat manusia tampaknya tidak memiliki jalan keluar dari kesulitan mereka-tetapi kedatangan dua orang luar menimbulkan perubahan.",
+    "uploadDate": "2025-06-19",
+    "link": "https://drive.usercontent.google.com/download?id=1MEmTyptRnuWGH6jyiiSPrnE4rrMqqDPW&export=download&authuser=0"
   }
 ];
 
