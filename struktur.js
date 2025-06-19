@@ -15,7 +15,7 @@ function changeBackground() {
 changeBackground();
 setInterval(changeBackground, 4000);
 
-const defaultAnimeDat =[
+const defaultAnimeData =[
   {
     "id": "anime-1749570932473854",
     "title": "Koe no Katachi",
