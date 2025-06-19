@@ -15,7 +15,11 @@ function changeBackground() {
 changeBackground();
 setInterval(changeBackground, 4000);
 
-const defaultAnimeData =[
+// SECTION: Penanganan Data Anime dengan API Server & localStorage sebagai fallback/cache
+
+const API_BASE_URL = "http://localhost:3000/api/anime";
+
+const defaultAnimeData = [
   {
     "id": "anime-1749570932473854",
     "title": "Koe no Katachi",
@@ -513,7 +517,7 @@ const defaultAnimeData =[
   }
 ];
 
-let animeData = defaultAnimeData;
+let animeData = JSON.parse(localStorage.getItem("animeData")) || defaultAnimeData;
 animeData = animeData.map(anime => {
   if (!anime.id) {
     anime.id = 'anime-' + Date.now() + Math.floor(Math.random() * 1000);
@@ -544,10 +548,19 @@ let currentEditingAnimeId = null;
 let adminMode = false;
 let selectedAnimeIds = new Set();
 
-// SECTION: Elemen Umpan Balik UI (Tidak terkait server)
+// SECTION: Elemen Umpan Balik UI
 
+const loadingOverlay = document.getElementById("loadingOverlay");
 const messageContainer = document.getElementById("messageContainer");
 const messageText = document.getElementById("messageText");
+
+function showLoading() {
+  if (loadingOverlay) loadingOverlay.style.display = "flex";
+}
+
+function hideLoading() {
+  if (loadingOverlay) loadingOverlay.style.display = "none";
+}
 
 function showMessage(message, type) {
   if (messageContainer && messageText) {
@@ -557,6 +570,114 @@ function showMessage(message, type) {
       messageContainer.classList.remove('show');
     }, 3000);
   }
+}
+
+
+// SECTION: Fungsi Pembantu untuk Panggilan API (Non-blocking)
+
+async function syncAnimeDataFromServer() {
+  showLoading();
+  try {
+    const response = await fetch(API_BASE_URL);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const serverData = await response.json();
+    if (serverData && serverData.length > 0) {
+      animeData = serverData;
+      saveToLocalStorage();
+      renderAnimeList(null, searchInput.value.trim());
+
+      // ✅ Panggil ini supaya tombol genre muncul
+      if (typeof populateGenreButtons === "function") {
+        populateGenreButtons();
+      }
+    }
+    showMessage("Data berhasil disinkronkan dari server.", "success");
+  } catch (error) {
+    console.warn("Could not sync from server, using local data:", error);
+    showMessage("Gagal menyinkronkan data dari server. Menampilkan data lokal.", "error");
+
+    // ✅ Pastikan tombol genre tetap muncul walau gagal fetch server
+    if (typeof populateGenreButtons === "function") {
+      populateGenreButtons();
+    }
+  } finally {
+    hideLoading();
+  }
+}
+
+
+function sendAddRequestToServer(newAnime) {
+  showLoading();
+  fetch(API_BASE_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(newAnime),
+  })
+    .then(response => {
+      if (!response.ok) throw new Error('Failed to add anime on server');
+      return response.json();
+    })
+    .then(data => {
+      console.log('Anime added to server:', data);
+      showMessage("Anime berhasil ditambahkan ke server!", "success");
+    })
+    .catch(error => {
+      console.error('Error adding anime to server:', error);
+      showMessage("Gagal menambahkan anime ke server. Silakan coba lagi.", "error");
+    })
+    .finally(() => {
+      hideLoading();
+    });
+}
+
+function sendUpdateRequestToServer(id, updatedAnime) {
+  showLoading();
+  fetch(`${API_BASE_URL}/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(updatedAnime),
+  })
+    .then(response => {
+      if (!response.ok) throw new Error('Failed to update anime on server');
+      console.log('Anime updated on server');
+      showMessage("Anime berhasil diperbarui di server!", "success");
+    })
+    .catch(error => {
+      console.error('Error updating anime to server:', error);
+      showMessage("Gagal memperbarui anime di server. Silakan coba lagi.", "error");
+    })
+    .finally(() => {
+      hideLoading();
+    });
+}
+
+function sendDeleteRequestToServer(ids) {
+  showLoading();
+  fetch(`${API_BASE_URL}/delete-multiple`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ ids: ids }),
+  })
+    .then(response => {
+      if (!response.ok) throw new Error('Failed to delete anime on server');
+      console.log('Anime deleted on server');
+      showMessage("Anime berhasil dihapus dari server!", "success");
+    })
+    .catch(error => {
+      console.error('Error deleting anime from server:', error);
+      showMessage("Gagal menghapus anime dari server. Silakan coba lagi.", "error");
+    })
+    .finally(() => {
+      hideLoading();
+    });
 }
 
 function saveToLocalStorage() {
@@ -588,7 +709,7 @@ function renderAnimeList(filterGenre = null, searchTerm = null) {
     if (filteredData.length === 0 && (filterGenre || searchTerm)) {
       container.innerHTML = `<p style="color: #aaa; text-align: center; width: 100%;">Tidak ada anime yang ditemukan dengan kriteria tersebut.</p>`;
     } else if (filteredData.length === 0) {
-      container.innerHTML = `<p style="color: #aaa; text-align: center; width: 100%;">Belum ada anime.</p>`; // Dihapus "Tambahkan yang baru!"
+      container.innerHTML = `<p style="color: #aaa; text-align: center; width: 100%;">Belum ada anime. Tambahkan yang baru!</p>`;
     }
   }
 
@@ -628,12 +749,14 @@ function renderAnimeList(filterGenre = null, searchTerm = null) {
   if (adminMode) {
     if (editSelectedBtn) editSelectedBtn.style.display = "inline-block";
     if (deleteSelectedBtn) deleteSelectedBtn.style.display = "inline-block";
-    // Tidak ada lagi tombol "Tambah Anime Baru" di admin mode
+    const addNewAnimeBtn = document.getElementById("addNewAnimeBtn");
+    if (addNewAnimeBtn) addNewAnimeBtn.style.display = "inline-block";
     if (toggleAdminModeBtn) toggleAdminModeBtn.textContent = "Selesai Mode Admin";
   } else {
     if (editSelectedBtn) editSelectedBtn.style.display = "none";
     if (deleteSelectedBtn) deleteSelectedBtn.style.display = "none";
-    // Tidak ada lagi tombol "Tambah Anime Baru" di admin mode
+    const addNewAnimeBtn = document.getElementById("addNewAnimeBtn");
+    if (addNewAnimeBtn) addNewAnimeBtn.style.display = "none";
     if (toggleAdminModeBtn) toggleAdminModeBtn.textContent = "Mode Admin";
   }
 
@@ -684,11 +807,7 @@ function renderAnimeList(filterGenre = null, searchTerm = null) {
 
 document.addEventListener("DOMContentLoaded", () => {
   renderAnimeList();
-  // Memastikan populateGenreButtons dipanggil setelah animeData siap
-  // (diasumsikan populateGenreButtons ada di menubaris.js dan diekspor melalui window)
-  if (typeof populateGenreButtons === "function") {
-    populateGenreButtons();
-  }
+  syncAnimeDataFromServer();
 });
 
 const showAllButton = document.getElementById("showAll");
@@ -699,7 +818,75 @@ if (showAllButton) {
   });
 }
 
-// Event listener untuk tombol "Tambah Anime Baru" telah dihapus karena formnya sudah dihapus
+const addAnimeBtn = document.getElementById("addAnimeBtn");
+if (addAnimeBtn) {
+  addAnimeBtn.addEventListener("click", () => {
+    const title = document.getElementById("titleInput").value.trim();
+    const image = document.getElementById("imageInput").value.trim();
+    const genre = document.getElementById("genreInput").value.trim();
+    const description = document.getElementById("descInput").value.trim();
+    const link = document.getElementById("linkInput").value.trim();
+
+    if (title && image && genre && description) {
+      const newAnime = {
+        id: 'anime-' + Date.now() + Math.floor(Math.random() * 1000),
+        title,
+        image,
+        genre,
+        description,
+        uploadDate: new Date().toISOString().split('T')[0],
+        link: link
+      };
+
+      animeData.push(newAnime);
+      saveToLocalStorage();
+      renderAnimeList(null, searchInput.value.trim());
+
+      sendAddRequestToServer(newAnime);
+
+      const titleInput = document.getElementById("titleInput");
+      const imageInput = document.getElementById("imageInput");
+      const genreInput = document.getElementById("genreInput");
+      const descInput = document.getElementById("descInput");
+      const linkInput = document.getElementById("linkInput");
+
+      if (titleInput) titleInput.value = "";
+      if (imageInput) imageInput.value = "";
+      if (genreInput) genreInput.value = "";
+      if (descInput) descInput.value = "";
+      if (linkInput) linkInput.value = "";
+
+      const addAnimeModal = document.getElementById("addAnimeModal");
+      if (addAnimeModal) {
+        addAnimeModal.style.display = "none";
+      }
+
+    } else {
+      alert("Judul, Gambar, Genre, dan Deskripsi harus diisi!");
+    }
+  });
+}
+
+const addNewAnimeBtn = document.getElementById("addNewAnimeBtn");
+if (addNewAnimeBtn) {
+  addNewAnimeBtn.addEventListener("click", () => {
+    const addAnimeModal = document.getElementById("addAnimeModal");
+    if (addAnimeModal) {
+      addAnimeModal.style.display = "flex";
+      const titleInput = document.getElementById("titleInput");
+      const imageInput = document.getElementById("imageInput");
+      const genreInput = document.getElementById("genreInput");
+      const descInput = document.getElementById("descInput");
+      const linkInput = document.getElementById("linkInput");
+
+      if (titleInput) titleInput.value = "";
+      if (imageInput) imageInput.value = "";
+      if (genreInput) genreInput.value = "";
+      if (descInput) descInput.value = "";
+      if (linkInput) linkInput.value = "";
+    }
+  });
+}
 
 if (searchInput) {
   searchInput.addEventListener("keyup", () => {
@@ -742,7 +929,7 @@ if (editSelectedBtn) {
 
 if (confirmDeleteBtn) {
   confirmDeleteBtn.addEventListener("click", () => {
-    // const idsToDelete = Array.from(selectedAnimeIds); // Tidak perlu dikirim ke server
+    const idsToDelete = Array.from(selectedAnimeIds);
 
     animeData = animeData.filter(anime => !selectedAnimeIds.has(anime.id));
     saveToLocalStorage();
@@ -750,7 +937,7 @@ if (confirmDeleteBtn) {
     selectedAnimeIds.clear();
     renderAnimeList(null, searchInput.value.trim());
 
-    // sendDeleteRequestToServer(idsToDelete); // Panggilan ke server dihapus
+    sendDeleteRequestToServer(idsToDelete);
   });
 }
 
@@ -809,7 +996,7 @@ if (saveEditBtn) {
         selectedAnimeIds.clear();
         renderAnimeList(null, searchInput.value.trim());
 
-        // sendUpdateRequestToServer(currentEditingAnimeId, animeData[animeIndex]); // Panggilan ke server dihapus
+        sendUpdateRequestToServer(currentEditingAnimeId, animeData[animeIndex]);
       }
     } else {
       alert("Judul, Gambar, Genre, dan Deskripsi harus diisi!");
@@ -835,6 +1022,16 @@ if (editAnimeModal) {
   });
 }
 
+const addAnimeModal = document.getElementById("addAnimeModal");
+if (addAnimeModal) {
+  window.addEventListener("click", (event) => {
+    if (event.target == addAnimeModal) {
+      addAnimeModal.style.display = "none";
+    }
+  });
+}
 // Ekspor fungsi agar bisa diakses dari menubaris.js
+
+// Akhir struktur.js
 window.renderAnimeList = renderAnimeList;
 window.animeData = animeData;
