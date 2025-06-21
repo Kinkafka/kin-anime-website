@@ -17,7 +17,6 @@ setInterval(changeBackground, 4000);
 
 // SECTION: Penanganan Data Anime dengan API Server & localStorage sebagai fallback/cache
 
-const API_BASE_URL = "http://localhost:3000/api/anime";
 
 const defaultAnimeData = [
   {
